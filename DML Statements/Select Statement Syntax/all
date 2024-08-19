@@ -1,0 +1,3 @@
+12. SELECT * FROM Product;
+
+14. SELECT distinct Category FROM Product;
