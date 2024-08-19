@@ -1,3 +1,6 @@
 12. SELECT * FROM Product;
 
+13. SELECT prodid, price,category
+From product
+
 14. SELECT distinct Category FROM Product;
