@@ -1,0 +1,10 @@
+UPDATE Product
+SET Discount = 25
+WHERE Category = 'Sports'
+---------------------
+UPDATE Product
+SET Price = 50
+WHERE Category = 'Apparel' AND Pdesc = 'Trouser'
+-----------------------
+UPDATE Salesman SET Sname = 'Jenny', Location = 'Bristol'WHERE Sid = 3
+-----------------------
