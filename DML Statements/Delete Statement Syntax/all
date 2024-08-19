@@ -1,1 +1,3 @@
-6. 
+6. DELETE FROM Saledetail WHERE Saleid = 1004
+
+22. DELETE FROM Saledetail WHERE Quantity > 5
