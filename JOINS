@@ -1,0 +1,37 @@
+44 . SELECT E.Id, E.Ename, E.Dept, C.Compid, C.Make
+FROM Employee E
+JOIN Computer C ON E.Compid = C.Compid;
+
+13 . SELECT E.Id, E.Ename, C.Compid, C.Make
+FROM Employee E
+JOIN Computer C ON E.Compid = C.Compid
+WHERE C.Model IN ('Precision', 'Edge');
+
+14.
+SELECT E.Dept, COUNT(C.Compid) AS "NUMBER OF COMPUTERS"
+FROM Employee E
+JOIN Computer C ON E.Compid = C.Compid
+WHERE C.Make = 'Dell'
+GROUP BY E.Dept;
+
+47.
+SELECT S.Saleid, S.Sldate
+FROM Sale S
+INNER JOIN Salesman SM ON S.Sid = SM.Sid
+WHERE SM.Location = 'London';
+
+15.
+SELECT Sid, Sname, Location
+FROM Salesman
+WHERE Location IN (
+  SELECT Location
+  FROM Salesman
+  GROUP BY Location
+  HAVING COUNT(Sid) > 1
+);
+
+49.
+SELECT S.Sname, S2.Saleid
+FROM Salesman S
+LEFT JOIN Sale S2 ON S.Sid = S2.Sid;
+
