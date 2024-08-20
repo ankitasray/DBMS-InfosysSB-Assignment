@@ -1,0 +1,10 @@
+27.
+SELECT Prodid, Category, Price, Discount
+FROM Product
+ORDER BY Category DESC, Price ASC;
+
+10.
+SELECT Prodid, Category, Discount
+FROM Product
+WHERE Category IN ('Sports', 'Apparel')
+ORDER BY Category ASC, Discount ASC;
