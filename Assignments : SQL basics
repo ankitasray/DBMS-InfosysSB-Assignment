@@ -1,0 +1,17 @@
+1.
+CREATE TABLE Article (
+  ArCode CHAR(5) CONSTRAINT ArCode_PK PRIMARY KEY CHECK (ArCode LIKE 'A%'),
+  ArName VARCHAR2(30) NOT NULL,
+  Rate NUMBER(8,2),
+  Quantity NUMBER(4) DEFAULT 0 CONSTRAINT Quantity_Check CHECK (Quantity >= 0),
+  Class CHAR(1) CONSTRAINT Class_Check CHECK (Class IN ('A', 'B', 'C'))
+);
+2.
+CREATE TABLE Shopper(
+  Shopperid INTEGER PRIMARY KEY,
+  ShopperName VARCHAR2(20) NOT NULL,
+  Gender CHAR(6) CHECK(GENDER IN ('Male', 'Female')),
+  MobileNo NUMBER NOT NULL,
+  Address VARCHAR2(50)
+)
+
