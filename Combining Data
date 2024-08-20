@@ -1,0 +1,27 @@
+40.
+SELECT Sid, Sname, Location
+FROM Salesman
+WHERE Sname LIKE '%e%' AND Location LIKE '%o%'
+UNION ALL
+SELECT Sid, Sname, Location
+FROM Salesman
+WHERE Sname LIKE '%a%' AND Location LIKE '%a%';
+
+41.
+SELECT Prodid, Pdesc, Category, Discount FROM Product WHERE Discount < 10 UNION ALL SELECT Prodid, Pdesc, Category, Discount FROM Product WHERE Category = 'Sports'
+
+42,
+SELECT Prodid, Pdesc, Category, Discount 
+FROM Product 
+WHERE Discount < 10
+UNION
+SELECT Prodid, Pdesc, Category, Discount 
+FROM Product 
+WHERE Category = 'Sports'
+
+43.
+SELECT 'S' AS TYPE, Sid AS ID, Sname AS DETAILS
+FROM Salesman
+UNION ALL
+SELECT 'P' AS TYPE, Prodid AS ID, Category AS DETAILS
+FROM Product
