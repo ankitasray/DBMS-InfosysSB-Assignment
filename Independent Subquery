@@ -1,0 +1,18 @@
+59.
+SELECT Saleid, Sldate
+FROM (
+  SELECT Saleid, Sldate
+  FROM Sale
+  ORDER BY Sldate DESC
+)
+WHERE ROWNUM = 1;
+60.
+SELECT Sname
+FROM Salesman
+WHERE Sid IN (
+  SELECT Sid
+  FROM Sale
+  GROUP BY Sid
+  HAVING COUNT(Saleid) >= 2
+);
+
