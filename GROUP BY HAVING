@@ -1,0 +1,13 @@
+29.
+SELECT TO_CHAR(TO_DATE(EXTRACT(MONTH FROM Sldate), 'MM'), 'Month') AS Month, COUNT(*) AS Number_Sale
+FROM Sale
+GROUP BY EXTRACT(MONTH FROM Sldate)
+ORDER BY Number_Sale DESC;
+
+11.
+SELECT Prodid, SUM(Quantity) AS QTY_SOLD
+FROM Saledetail
+WHERE Quantity > 1
+GROUP BY Prodid
+HAVING COUNT(Prodid) > 1;
+
